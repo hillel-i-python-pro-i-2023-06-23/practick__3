@@ -1,0 +1,5 @@
+
+
+#optional
+sympy==1.12
+
