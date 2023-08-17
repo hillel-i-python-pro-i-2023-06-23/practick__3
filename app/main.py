@@ -5,7 +5,7 @@ from app.services.encryption import encrypt, decrypt
 
 def main():
     public_key, private_key = generate_keys()
-
+    message = ''
     while True:
         print('1. Зашифровать')
         print('2. Расшифровать')
@@ -24,7 +24,6 @@ def main():
             encrypted_message = []
             if choice_mod == '1':
                 encrypted_message = input("Input encrypted_message")
-                encrypted_message = [int(num) for num in encrypted_message.strip('[]').split(',')]
             elif choice_mod == '2':
                 encrypted_message = encrypt(public_key, message)
 
@@ -33,4 +32,3 @@ def main():
 
         elif choice == '3':
             break
-
